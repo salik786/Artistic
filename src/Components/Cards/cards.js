@@ -7,7 +7,7 @@ const Card = ({ ModalHandler, data }) => {
         localStorage.setItem("favour", JSON.stringify(data));
         setFav(!fav);
     }
-    console.log(data);
+
     return (
 
         <div class="card card-margin m-2">

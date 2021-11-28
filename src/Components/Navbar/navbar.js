@@ -1,5 +1,6 @@
 import React from "react";
-
+// import logo from "../../../public/logoimg.png"
+import "./navbar.css"
 const Navbar = () => {
     return (
         <>
@@ -9,21 +10,20 @@ const Navbar = () => {
                         <span class="navbar-toggler-icon " ></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <a class="navbar-brand" href="#" >Artistic</a>
+                        <a class="navbar-brand" href="#" ><span><img src="https://i.ibb.co/tsq2Jkr/Untitled-design-3.png" alt="Untitled-design-3" height="35" width="35" border="0" /></span ><span className="logo">Artistic</span></a>
 
-                        <form class="d-flex">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled">Disabled</a>
-                                </li>
-                            </ul>
-                        </form>
+                        <ul class="navbar-nav mb-2 ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Favourites</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Help</a>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </nav>

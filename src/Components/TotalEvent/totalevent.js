@@ -11,7 +11,14 @@ const TotalEvents = ({ len }) => {
     }, [cookies])
 
     return (
-        <><h5><span className="even-info">{`${inpVal}`} </span> {`upcoming events : ${len}`}</h5>
+        <>
+            <h5>
+                {
+                    inpVal != "" ?
+                        <span className="even-info">{`${inpVal}`}  {`upcoming events : ${len}`}</span>
+                        : <span className="even-info text-danger" >No Artist Search </span>
+                }
+            </h5>
         </>
     )
 }

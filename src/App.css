@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@500&display=swap");
 .App {
   text-align: center;
 }
-
+body {
+  font-family: "Be Vietnam", sans-serif;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

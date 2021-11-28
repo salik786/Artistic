@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-date-picker';
 
-function Pagination() {
+function Pagination({ MorePosts }) {
 
     return (
         <div>
-            <button className="btn btn-primary">Show More</button>
+            <button className="btn btn-primary" onClick={MorePosts}>Show More</button>
         </div>
     );
 }

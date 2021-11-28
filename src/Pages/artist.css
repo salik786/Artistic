@@ -1,4 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@500&display=swap");
 .shadow1 {
   box-shadow: 0px 0px 3px 0px #888888;
-  height: 30vh;
+  display: flex;
+  height: auto;
+  background-color: #0f0452;
+  padding: 50px;
+}
+.title-head {
+  color: white;
+}
+
+body {
+  font-family: "Be Vietnam", sans-serif;
 }
