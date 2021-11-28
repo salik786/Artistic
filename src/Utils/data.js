@@ -1,6 +1,81 @@
 const data = [
    {
-      "name": "Radiohead",
+      "name": "Salik",
+      "img": "https://picsum.photos/200/300?random=1",
+      "albums": [
+         {
+            "title": "The King of Limbs",
+            "songs": [
+               {
+                  "title": "Bloom",
+                  "length": "5:15"
+               },
+            ],
+            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band saleem, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
+         },
+      ]
+   }, {
+      "name": "tayyab",
+      "img": "https://picsum.photos/200/300?random=1",
+      "albums": [
+         {
+            "title": "The King of Limbs",
+            "songs": [
+               {
+                  "title": "Bloom",
+                  "length": "5:15"
+               },
+            ],
+            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band ali, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
+         },
+      ]
+   }, {
+      "name": "ahmed",
+      "img": "https://picsum.photos/200/300?random=1",
+      "albums": [
+         {
+            "title": "The King of Limbs",
+            "songs": [
+               {
+                  "title": "Bloom",
+                  "length": "5:15"
+               },
+            ],
+            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band ahmed, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
+         },
+      ]
+   }, {
+      "name": "ahmed",
+      "img": "https://picsum.photos/200/300?random=1",
+      "albums": [
+         {
+            "title": "The King of Limbs",
+            "songs": [
+               {
+                  "title": "Bloom",
+                  "length": "5:15"
+               },
+            ],
+            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band ahmed, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
+         },
+      ]
+   }, {
+      "name": "ahmed",
+      "img": "https://picsum.photos/200/300?random=1",
+      "albums": [
+         {
+            "title": "The King of Limbs",
+            "songs": [
+               {
+                  "title": "Bloom",
+                  "length": "5:15"
+               },
+            ],
+            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band ahmed, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
+         },
+      ]
+   }, {
+      "name": "sdf",
       "img": "https://picsum.photos/200/300?random=1",
       "albums": [
          {
@@ -26,11 +101,11 @@ const data = [
                   "length": "5:15"
                },
             ],
-            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band Radiohead, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
+            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band sdfsfsdf, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
          },
       ]
    }, {
-      "name": "Radiohead",
+      "name": "sdfsfsdf",
       "img": "https://picsum.photos/200/300?random=1",
       "albums": [
          {
@@ -41,86 +116,11 @@ const data = [
                   "length": "5:15"
                },
             ],
-            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band Radiohead, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
+            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band sdfsfsdf, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
          },
       ]
    }, {
-      "name": "Radiohead",
-      "img": "https://picsum.photos/200/300?random=1",
-      "albums": [
-         {
-            "title": "The King of Limbs",
-            "songs": [
-               {
-                  "title": "Bloom",
-                  "length": "5:15"
-               },
-            ],
-            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band Radiohead, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
-         },
-      ]
-   }, {
-      "name": "Radiohead",
-      "img": "https://picsum.photos/200/300?random=1",
-      "albums": [
-         {
-            "title": "The King of Limbs",
-            "songs": [
-               {
-                  "title": "Bloom",
-                  "length": "5:15"
-               },
-            ],
-            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band Radiohead, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
-         },
-      ]
-   }, {
-      "name": "Radiohead",
-      "img": "https://picsum.photos/200/300?random=1",
-      "albums": [
-         {
-            "title": "The King of Limbs",
-            "songs": [
-               {
-                  "title": "Bloom",
-                  "length": "5:15"
-               },
-            ],
-            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band Radiohead, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
-         },
-      ]
-   }, {
-      "name": "Radiohead",
-      "img": "https://picsum.photos/200/300?random=1",
-      "albums": [
-         {
-            "title": "The King of Limbs",
-            "songs": [
-               {
-                  "title": "Bloom",
-                  "length": "5:15"
-               },
-            ],
-            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band Radiohead, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
-         },
-      ]
-   }, {
-      "name": "Radiohead",
-      "img": "https://picsum.photos/200/300?random=1",
-      "albums": [
-         {
-            "title": "The King of Limbs",
-            "songs": [
-               {
-                  "title": "Bloom",
-                  "length": "5:15"
-               },
-            ],
-            "description": "\n\tThe King of Limbs is the eighth studio album by English rock band Radiohead, produced by Nigel Godrich. It was self-released on 18 February 2011 as a download in MP3 and WAV formats, followed by physical CD and 12\" vinyl releases on 28 March, a wider digital release via AWAL, and a special \"newspaper\" edition on 9 May 2011. The physical editions were released through the band's Ticker Tape imprint on XL in the United Kingdom, TBD in the United States, and Hostess Entertainment in Japan.\n      "
-         },
-      ]
-   }, {
-      "name": "Radiohead",
+      "name": "sdfsfsdf",
       "img": "https://picsum.photos/200/300?random=1",
       "albums": [
          {
