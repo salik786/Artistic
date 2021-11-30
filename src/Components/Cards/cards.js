@@ -10,7 +10,7 @@ const Card = ({ ModalHandler, data, index }) => {
     const AddFav = (data) => {
         favEvent.push(data.even_id);
         console.log(favEvent)
-        setCookie("fav_id", favEvent, { path: "/" });
+        setCookie("fav_id ", favEvent, { path: "/ " });
         console.log(data.even_id)
 
 
