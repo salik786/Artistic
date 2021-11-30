@@ -1,10 +1,26 @@
 .logo {
-  font-size: 28px;
+  font-size: 25px;
   padding-top: 1.5rem;
   margin-left: 1rem;
-  font-weight: 600;
+  letter-spacing: 2px;
+
+  font-weight: 400;
   font-family: "Be Vietnam", sans-serif;
 }
 .nav-link {
   font-family: "Be Vietnam", sans-serif;
+  color: #0f0452 !important;
+}
+.nav-item {
+  padding-left: 40px;
+}
+.active {
+  /* border-bottom: 1px solid #5198d9; */
+  color: #0279e7 !important;
+}
+button.navbar-toggler {
+  background-color: #0b5ed7;
+}
+
+.navbar-toggler-icon {
 }

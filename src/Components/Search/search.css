@@ -1,0 +1,22 @@
+input {
+  width: 30vh;
+}
+.form-d {
+  width: 32vw;
+}
+.card-contain {
+  height: 50vh;
+  width: 32vw;
+  overflow: auto;
+  position: absolute;
+  z-index: 0;
+}
+.card {
+  width: 100%;
+  padding: 0 !important;
+  margin: 0px;
+}
+.card:hover {
+  background-color: #0f0452;
+  color: white;
+}

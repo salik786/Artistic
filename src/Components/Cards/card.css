@@ -39,13 +39,13 @@ body {
   word-wrap: break-word;
   background-color: #ffffff;
   background-clip: border-box;
-  border: 5px solid #640aeb;
   border-radius: 8px;
 }
 
 .card .card-header.no-border {
   border: 0;
 }
+
 .card .card-header {
   background: none;
   padding: 0 0.9375rem;

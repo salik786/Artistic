@@ -7,7 +7,9 @@ const TotalEvents = ({ len }) => {
 
     useEffect(() => {
         const cookVal = cookies.access_token;
-        setInpVal(cookVal)
+        if (cookVal != undefined) {
+            setInpVal(cookVal)
+        }
     }, [cookies])
 
     return (
@@ -15,7 +17,7 @@ const TotalEvents = ({ len }) => {
             <h5>
                 {
                     inpVal != "" ?
-                        <span className="even-info">{`${inpVal}`}  {`upcoming events : ${len}`}</span>
+                        <span className="even-info">{`${inpVal.name}`}  {`upcoming events : ${len}`}</span>
                         : <span className="even-info text-danger" >No Artist Search </span>
                 }
             </h5>

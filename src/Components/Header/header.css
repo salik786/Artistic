@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@500&display=swap");
+
+.header-section {
+  height: auto;
+  width: 100%;
+  display: flex;
+  background-color: #03173d;
+  flex-direction: row;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Be Vietnam", sans-serif;
+}
+.right-div {
+}
+.banner-text {
+  font-size: 40px;
+  width: 70%;
+  margin-left: 4rem;
+  margin-top: 4rem;
+  color: white;
+}
+.banner-text-p {
+  font-family: "Be Vietnam", sans-serif;
+  width: 70%;
+  font-size: 12px;
+  margin-left: 4rem;
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 15px;
+  font-weight: lighter;
+  color: white;
+}
+
+.btn-started {
+  margin-left: 4rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #482ff7;
+  color: white;
+  border: 5px solid #482ff7;
+}
+.btn-started-link {
+  color: white;
+  font-family: "Be Vietnam", sans-serif;
+}
+/* services style */
+.service {
+  background-color: white;
+  width: 100%;
+
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.heading-service {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  background-color: #482ff7;
+  padding: 20px;
+}
+.left-service {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.service-desc > img {
+  width: 600px;
+  height: 550px;
+  margin-left: -40px;
+}
+.right-service-image > img {
+  width: 85%;
+  height: 90%;
+  margin-left: 10%;
+  margin-right: -100px;
+  margin-top: 50px;
+}
+.right-service {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.service-desc {
+  margin-top: 3%;
+  margin: 5%;
+}
+
+.service-desc > p {
+  height: 35%;
+
+  padding: 3%;
+  color: gray;
+}
+
+.service-desc > h1 {
+  color: #03173d;
+  font-size: 30px;
+}
+
+/* get in touch service styling  */
+
+.get-in-touch {
+  background: linear-gradient(to bottom, #482ff7 0%, #03173d 70%);
+  height: 45vh;
+  color: white;
+  font-size: 1.5rem;
+  justify-content: center;
+  display: flex;
+  padding: 5%;
+
+  flex-direction: column;
+}
+.get-in-touch > button {
+  padding: 15px;
+  width: 10%;
+  margin: 20px;
+  background-color: #482ff7;
+  border: 5px solid #482ff7;
+  font-size: 15px;
+  color: white;
+
+  font-family: "Be Vietnam", sans-serif;
+}
+/* Procedure section styling */
+.procedure {
+  height: 100vh;
+  background: lightblue url("https://i.ibb.co/VgkdK6Q/ie-3.png") no-repeat fixed
+    center;
+  width: 100%;
+}
+.procedure > h1 {
+  text-align: center;
+  font-size: 30px;
+  background-color: #482ff7;
+  color: white;
+  padding: 30px;
+}
+.row1,
+.row2 {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+
+  align-items: center;
+  justify-content: center;
+}
+.image {
+  width: 20%;
+  margin: 3%;
+}
+.image > img {
+  height: 150px;
+}
+.arrow1,
+.arrow2 {
+  width: 30%;
+  text-align: center;
+}
+.arrow1 > hr {
+  width: 90%;
+}
