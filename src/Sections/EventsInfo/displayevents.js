@@ -42,8 +42,8 @@ const IncCount=()=>{
 
     return (
         <>
-       
-                {postsToShow.map((item, index) => {
+            <div className="row">
+                            {postsToShow.map((item, index) => {
                     return (
                         <>
                             {checkCook == true
@@ -58,7 +58,7 @@ const IncCount=()=>{
                             }
                         </>
                     )
-                })} {checkCook==true?<ArtistInfo  data={cookies.access_token}/>:<></>}
+                })} 
           
             {
                 postsToShow.length == postsPerPage ?
@@ -67,6 +67,7 @@ const IncCount=()=>{
                         <Pagination MorePosts={handleShowMorePosts} />
                     </div> : <></>
             }
+            </div>
         </>
     )
 }

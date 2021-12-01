@@ -7,7 +7,7 @@ import TotalEvents from "../../Components/TotalEvent/totalevent";
 import ArtistSearch from "../../Sections/ArtistSearch/artistsearch"
 import { useCookies } from "react-cookie";
 import DisplayEvents from "../../Sections/EventsInfo/displayevents";
-
+import ArtistInfo from "../../Sections/ArtistInfo/artistinfo"
 
 const Artist = () => {
 
@@ -34,6 +34,9 @@ const Artist = () => {
                 <div className="row">
                         <div className="col-9">
                         <DisplayEvents />
+                        </div>
+                        <div className="col-3">
+                        {<ArtistInfo />}
                         </div>
                     {/* <div className="col-xl-3"><ArtistInfo /></div> */}
                 </div>
