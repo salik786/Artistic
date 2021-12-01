@@ -80,7 +80,7 @@ const Search = () => {
                         })}
                     </div>
                 ) : (
-                    <>No such artist</>
+                    <></>
                 )}
             </form>
 

@@ -4,15 +4,15 @@ import { BsBookmark, BsBookmarkFill } from "react-icons/bs"
 import { useCookies } from "react-cookie";
 const Card = ({ ModalHandler, data, index }) => {
     console.log(index)
-    const [cookies, setCookie] = useState(["fav_id"])
+    const [cookies, setCookie] = useCookies(["fav_id"])
     const favEvent = [];
     const [fav, setFav] = useState(false);
     const AddFav = (data) => {
+
         favEvent.push(data.even_id);
         console.log(favEvent)
         setCookie("fav_id", favEvent, { path: "/" });
-        console.log(data.even_id)
-
+        
 
         setFav(!fav);
     }

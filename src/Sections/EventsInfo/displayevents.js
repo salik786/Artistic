@@ -1,7 +1,7 @@
-import Pagination from "../Components/Pagination/pagination";
+import Pagination from "../../Components/Pagination/pagination";
 import { useState, useEffect } from "react";
-import Card from "../Components/Cards/cards"
-import data from "../Utils/EventsData"
+import Card from "../../Components/Cards/cards"
+import data from "../../Utils/EventsData"
 import { useCookies } from "react-cookie";
 var postsPerPage = 5
 
@@ -31,20 +31,19 @@ const DisplayEvents = () => {
         }
         loopWithSlice(0, 100)
 
-    }, [])
+    }, [checkCook])
 
 
     return (
         <>
-            <div className="row p-4">
+            <div >
                 {postsToShow.map((item, index) => {
                     return (
-
                         <>
                             {checkCook == true
                                 ? item.Art_id == cookies.access_token.id ?
 
-                                    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 p-1">
+                                    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
                                         <Card key={index} data={item} index={index} />
                                     </div>
 
@@ -53,7 +52,7 @@ const DisplayEvents = () => {
                             }
                         </>
                     )
-                })}
+                })} 
             </div>
             {
                 postsToShow.length == postsPerPage ?
