@@ -5,20 +5,20 @@ import Event from "../../Utils/EventsData"
 const TotalEvents = () => {
     const [cookies, setCookie] = useCookies(['access_token'])
     const [inpVal, setInpVal] = useState("")
-    const [totalEv,setTotalEv]=useState(0)
+    const [totalEv, setTotalEv] = useState(0)
     useEffect(() => {
         const cookVal = cookies.access_token;
         if (cookVal != undefined) {
             setInpVal(cookVal);
-            let count=0;
+            let count = 0;
             for (var i = 0; i < Event.length; i++) {
                 console.log(cookVal.id)
-                if(Event[i].Art_id==cookVal.id ) {
-                count++;
+                if (Event[i].Art_id == cookVal.id) {
+                    count++;
 
                 }
             }
-            setTotalEv(count)  
+            setTotalEv(count)
 
 
 

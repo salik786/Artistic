@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Search from '../../Components/Search/search'
-import ButtonFilter from '../../Components/Filters/btnfilter'
 
 import CountryFilter from '../../Components/Filters/countryfilter'
 import BadgeFilter from '../../Components/BadgeFilter/badgeFilter'

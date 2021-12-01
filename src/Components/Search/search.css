@@ -6,17 +6,16 @@ input {
 }
 .card-contain {
   height: 50vh;
-  width: 32vw;
+  width: 30vw;
   overflow: auto;
   position: absolute;
   z-index: 1;
 }
 .card {
   width: 100%;
-  border-bottom:4px solid transparent ;
+  border-bottom: 4px solid transparent;
 }
 .card:hover {
-  border-bottom:4px solid #2472cc;
-  transition:  all 0.25s ease-in-out;
-  
+  border-bottom: 4px solid #2472cc;
+  transition: all 0.25s ease-in-out;
 }

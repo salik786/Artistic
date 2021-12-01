@@ -3,14 +3,13 @@ import { useState, useEffect } from "react";
 import Card from "../../Components/Cards/cards"
 import data from "../../Utils/EventsData"
 import { useCookies } from "react-cookie";
-import ArtistInfo from "../ArtistInfo/artistinfo"
 var postsPerPage = 5
 
 const DisplayEvents = () => {
 
     const [cookies, setCookie] = useCookies(['access_token'])
     const [checkCook, setCook] = useState(false)
-    const [count,setCount]=useState(0)
+    const [count, setCount] = useState(0)
     const [cardData, setCardData] = useState(data);
     const [postsToShow, setPostsToShow] = useState([])
     let arrayForHoldingPosts = []
@@ -21,10 +20,10 @@ const DisplayEvents = () => {
         setPostsToShow(arrayForHoldingPosts)
     }
     // increment when user wants to get more events data
-//cHECK HOW ,MANY EVENT A ARTIST HAVE
-const IncCount=()=>{
-    setCount(count+1)
-}
+    //cHECK HOW ,MANY EVENT A ARTIST HAVE
+    const IncCount = () => {
+        setCount(count + 1)
+    }
     const handleShowMorePosts = () => {
         postsPerPage += 3;
         loopWithSlice(0, postsPerPage)
@@ -37,20 +36,20 @@ const IncCount=()=>{
         }
         loopWithSlice(0, 100)
 
-    }, [checkCook])
-   
+    }, [cookies])
+
 
     return (
         <>
             <div className="row">
-                            {postsToShow.map((item, index) => {
+                {postsToShow.map((item, index) => {
                     return (
                         <>
-                            {checkCook == true
-                                ? item.Art_id == cookies.access_token.id || item.country==cookies.country?
+                            {cookies.access_token != undefined
+                                ? item.Art_id == cookies.access_token.id ?
 
                                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                        <Card key={index} data={item} index={index} Count={IncCount}/>
+                                        <Card key={index} data={item} index={index} Count={IncCount} />
                                     </div>
 
                                     : <></>
@@ -58,15 +57,15 @@ const IncCount=()=>{
                             }
                         </>
                     )
-                })} 
-          
-            {
-                postsToShow.length == postsPerPage ?
+                })}
 
-                    <div className="row p-4 text-center">
-                        <Pagination MorePosts={handleShowMorePosts} />
-                    </div> : <></>
-            }
+                {
+                    postsToShow.length == postsPerPage ?
+
+                        <div className="row p-4 text-center">
+                            <Pagination MorePosts={handleShowMorePosts} />
+                        </div> : <></>
+                }
             </div>
         </>
     )

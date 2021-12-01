@@ -22,9 +22,9 @@ const CountryFilter = () => {
     }, [cookies.country])
     return (
         <>
-            <p className="text-dark mb-1">Select Country</p>
+            <p className="text-dark mb-1">Filter Artist By Country</p>
             <CountrySelect
-            className="w-50"
+                className="w-50"
                 onChange={ClickHandler}
                 value={value1}
                 selected={value1}

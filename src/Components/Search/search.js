@@ -8,7 +8,7 @@ const Search = () => {
     const [inpVal, setInpVal] = useState("")
     const [emptyErr, setEmpty] = useState(false);
     const [select, setSelect] = useState(false);
-    const [cookies, setCookie] = useCookies(['access_token'])
+    const [cookies, setCookie, removeCookies] = useCookies(['access_token'])
 
     const HandleChange = (e) => {
         setSelect(false)
@@ -22,7 +22,8 @@ const Search = () => {
         // error handling if search field is empty
         if (inpVal == "") {
             setEmpty(true);
-            setCookie('access_token', "", { path: '/' })
+            removeCookies("access_token")
+
         }
         if (item.name != undefined) {
             setInpVal(item.name.toLowerCase())
@@ -39,7 +40,7 @@ const Search = () => {
         if (event.key === 'Enter') {
             if (inpVal == "") {
                 setEmpty(true);
-                setCookie('access_token', "", { path: '/' })
+                removeCookies("access_token")
             }
             else {
                 setEmpty(false);
@@ -56,44 +57,44 @@ const Search = () => {
     }, [])
     return (
         <>
-       
+
             <h5 className="">Search Your Favourite Artists</h5>
-                <div class="input-group w-75">
-                   
-                    <input id="search-focus"  autocomplete="off" type="search" id="form1" value={inpVal} class="form-control" onChange={HandleChange} onKeyPress={EnterHandler} placeholder="Enter Name of Artist" />
-                    <button type="button" class="btn btn-primary" onClick={ClickHandler} >
-                        <BsSearch />
+            <div class="input-group w-75">
 
-                    </button>
-                 
-                </div>
+                <input id="search-focus" autocomplete="off" type="search" id="form1" value={inpVal} class="form-control" onChange={HandleChange} onKeyPress={EnterHandler} placeholder="Enter Name of Artist" />
+                <button type="button" class="btn btn-primary" onClick={ClickHandler} >
+                    <BsSearch />
 
-                {emptyErr == true ? <div><h6 className="text-danger">Artist Field Is Empty</h6></div> : <></>}
+                </button>
 
-                {
-                    select == false ?
+            </div>
 
-                        inpVal != "" ? (
-                            <div className="card-contain" >
-                                {Dataset.map((item, index) => {
-                                    return (item.name.toLowerCase().includes(inpVal)
-                                        ?
+            {emptyErr == true ? <div><h6 className="text-danger">Artist Field Is Empty</h6></div> : <></>}
 
-                                        <SearchCard item={item} ClickHandler={ClickHandler} />
+            {
+                select == false ?
 
+                    inpVal != "" ? (
+                        <div className="card-contain" >
+                            {Dataset.map((item, index) => {
+                                return (item.name.toLowerCase().includes(inpVal)
+                                    ?
 
-                                        :
+                                    <SearchCard item={item} ClickHandler={ClickHandler} />
 
 
-                                        <></>
-                                    )
-                                })}
-                            </div>
-                        ) : (
-                            <></>
-                        )
-                        : <></>}
-      
+                                    :
+
+
+                                    <></>
+                                )
+                            })}
+                        </div>
+                    ) : (
+                        <></>
+                    )
+                    : <></>}
+
 
 
         </>
