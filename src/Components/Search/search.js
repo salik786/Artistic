@@ -7,17 +7,18 @@ import SearchCard from "../SearchCardDetail/searchcard";
 const Search = () => {
     const [inpVal, setInpVal] = useState("")
     const [emptyErr, setEmpty] = useState(false);
-
+    const [select, setSelect] = useState(false);
     const [cookies, setCookie] = useCookies(['access_token'])
 
     const HandleChange = (e) => {
+        setSelect(false)
         setInpVal((e.target.value.toLowerCase()));
 
     }
 
     const ClickHandler = (item) => {
 
-
+        setSelect(true)
         // error handling if search field is empty
         if (inpVal == "") {
             setEmpty(true);
@@ -25,9 +26,6 @@ const Search = () => {
         }
         if (item.name != undefined) {
             setInpVal(item.name.toLowerCase())
-
-
-
             setEmpty(false);
             setCookie('access_token', JSON.stringify(item), { path: '/' })
         }
@@ -58,31 +56,44 @@ const Search = () => {
     }, [])
     return (
         <>
-            <form className="form-d">
-                <div class="input-group ">
-                    <input id="search-focus" type="search" id="form1" value={inpVal} class="form-control" onChange={HandleChange} onKeyPress={EnterHandler} placeholder="Enter Name of Artist" />
-
+       
+            <h5 className="">Search Your Favourite Artists</h5>
+                <div class="input-group w-75">
+                   
+                    <input id="search-focus"  autocomplete="off" type="search" id="form1" value={inpVal} class="form-control" onChange={HandleChange} onKeyPress={EnterHandler} placeholder="Enter Name of Artist" />
                     <button type="button" class="btn btn-primary" onClick={ClickHandler} >
                         <BsSearch />
+
                     </button>
-                    {emptyErr == true ? <div><h6 className="text-danger">Artist Field Is Empty</h6></div> : <></>}
+                 
                 </div>
-                {inpVal != "" ? (
-                    <div className="card-contain">
-                        {Dataset.map((item, index) => {
-                            return ((item.name.toLowerCase()).includes(inpVal) ?
-                                <>
-                                    <SearchCard item={item} ClickHandler={ClickHandler} />
-                                </>
-                                :
-                                <></>
-                            )
-                        })}
-                    </div>
-                ) : (
-                    <></>
-                )}
-            </form>
+
+                {emptyErr == true ? <div><h6 className="text-danger">Artist Field Is Empty</h6></div> : <></>}
+
+                {
+                    select == false ?
+
+                        inpVal != "" ? (
+                            <div className="card-contain" >
+                                {Dataset.map((item, index) => {
+                                    return (item.name.toLowerCase().includes(inpVal)
+                                        ?
+
+                                        <SearchCard item={item} ClickHandler={ClickHandler} />
+
+
+                                        :
+
+
+                                        <></>
+                                    )
+                                })}
+                            </div>
+                        ) : (
+                            <></>
+                        )
+                        : <></>}
+      
 
 
         </>

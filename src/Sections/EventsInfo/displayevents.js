@@ -9,6 +9,7 @@ const DisplayEvents = () => {
 
     const [cookies, setCookie] = useCookies(['access_token'])
     const [checkCook, setCook] = useState(false)
+    const [count,setCount]=useState(0)
     const [cardData, setCardData] = useState(data);
     const [postsToShow, setPostsToShow] = useState([])
     let arrayForHoldingPosts = []
@@ -19,6 +20,10 @@ const DisplayEvents = () => {
         setPostsToShow(arrayForHoldingPosts)
     }
     // increment when user wants to get more events data
+//cHECK HOW ,MANY EVENT A ARTIST HAVE
+const IncCount=()=>{
+    setCount(count+1)
+}
     const handleShowMorePosts = () => {
         postsPerPage += 3;
         loopWithSlice(0, postsPerPage)
@@ -32,19 +37,19 @@ const DisplayEvents = () => {
         loopWithSlice(0, 100)
 
     }, [checkCook])
-
+   
 
     return (
         <>
-            <div >
+       
                 {postsToShow.map((item, index) => {
                     return (
                         <>
                             {checkCook == true
-                                ? item.Art_id == cookies.access_token.id ?
+                                ? item.Art_id == cookies.access_token.id || item.country==cookies.country?
 
-                                    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                                        <Card key={index} data={item} index={index} />
+                                    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                        <Card key={index} data={item} index={index} Count={IncCount}/>
                                     </div>
 
                                     : <></>
@@ -53,7 +58,7 @@ const DisplayEvents = () => {
                         </>
                     )
                 })} 
-            </div>
+          
             {
                 postsToShow.length == postsPerPage ?
 

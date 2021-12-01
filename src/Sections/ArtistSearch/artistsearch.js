@@ -1,60 +1,62 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Search from '../../Components/Search/search'
 import ButtonFilter from '../../Components/Filters/btnfilter'
 
 import CountryFilter from '../../Components/Filters/countryfilter'
 import BadgeFilter from '../../Components/BadgeFilter/badgeFilter'
 import "./artistsearch.css"
-import {useCookies} from "react-cookie"
+import { useCookies } from "react-cookie"
 function ArtistInfo() {
-    const [cookies,setCookie,removeCookies] = useCookies(["country"])
+    const [cookies, setCookie, removeCookies] = useCookies(["country"])
     //to show which type of filter applied 
-    const [filter,setFilter]=useState(false);
-    const FilterRemove=()=>{
-        
+    const [filter, setFilter] = useState(false);
+    const FilterRemove = () => {
+
         removeCookies("country")
         setFilter(false);
-       
+
+
 
     }
-    useEffect(()=>{
-        if(cookies.country!=undefined)
-        {
+    useEffect(() => {
+        if (cookies.country != undefined) {
             setFilter(true);
         }
 
 
-    },[cookies])
+    }, [cookies])
     return (
         <div>
-               <div className="row shadow1 d-flex " >
-               
-               <form className=" col-12 d-flex flex-row ">
-                   <div className="row">
-                       <div className=" col-xl-12 col-lg-8 col-md-6 col-sm-12  text-center">
-                           <Search />
-                       </div>
-                       <div className="row w-100 justify-content-end mt-4">
-                           <h5>Filters</h5>
-                       {filter==true?
-                       <div className="col-sm-12 ">
-                           {/* <ButtonFilter  /> */}
-                           <BadgeFilter FilterRemove={FilterRemove} />
-                       </div>:<><h6>No Filters Applied</h6></> 
+            <div className="row shadow1" >
 
-                       }</div>
-                   </div>
 
-                   <div className="row w-25">
-                       <div className="col-sm-12 ">
-                           {/* <ButtonFilter  /> */}
-                           <CountryFilter />
-                       </div>
-                   </div>
-                
-               </form>
+                <div className="row">
+                    <div className=" col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                        <Search />
+                    </div>
+                    <div className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
 
-           </div>
+                        <CountryFilter />
+
+
+                    </div>
+                </div>
+
+
+
+
+
+                <form className="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <h6 className="mt-4">Filters</h6>
+                    {filter == true ?
+                        <div className="col-sm-12 ">
+                            {/* <ButtonFilter  /> */}
+                            <BadgeFilter FilterRemove={FilterRemove} />
+                        </div> : <><p>No Filters Applied</p></>
+
+                    }</form>
+
+            </div>
         </div>
     )
 }

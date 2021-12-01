@@ -9,7 +9,7 @@ input {
   width: 32vw;
   overflow: auto;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
 }
 .card {
   width: 100%;

@@ -2,16 +2,7 @@
   width: 100%;
   height: 150px;
 }
-.favourite {
-  position: absolute;
-  background-color: transparent;
-  height: 30px;
-  width: 30px;
-  text-align: center;
-  top: -0%;
-  z-index: 0;
-  left: 90%;
-}
+
 .card {
   padding-top: 8%;
 }

@@ -31,10 +31,10 @@ const Artist = () => {
                 <div className="row">
                     <div className="col-12 mt-2 pt-2 pl-4"><TotalEvents len={data.length} /></div>
                 </div>
-                <div className="row ">
-                    <div className="col-xl-9">
+                <div className="row">
+                 
                         <DisplayEvents />
-                    </div>
+                    
                     {/* <div className="col-xl-3"><ArtistInfo /></div> */}
                 </div>
 
