@@ -1,7 +1,9 @@
-import Navbar from './Components/Navbar/navbar';
+import Navbar from './Sections/Navbar/navbar';
 // import Search from './Components/Search/search';
 import Artist from './Pages/Artists/Artist';
 // import logo from "./logoimg.png"
+
+import Footer from './Sections/Footer/footer'
 import Header from './Components/Header/header';
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
 
         <Navbar />
         <Artist />
+        {/* <Footer /> */}
         {/* <Header /> */}
 
       </header>

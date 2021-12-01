@@ -9,14 +9,14 @@ input {
   width: 32vw;
   overflow: auto;
   position: absolute;
-  z-index: 0;
+  z-index: 1;
 }
 .card {
   width: 100%;
-  padding: 0 !important;
-  margin: 0px;
+  border-bottom:4px solid transparent ;
 }
 .card:hover {
-  background-color: #0f0452;
-  color: white;
+  border-bottom:4px solid #2472cc;
+  transition:  all 0.25s ease-in-out;
+  
 }

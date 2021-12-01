@@ -1,34 +1,21 @@
+
+import FavEvents from "../FavEvents/favevents";
 import "./card.css"
-import { useEffect, useState } from "react";
-import { BsBookmark, BsBookmarkFill } from "react-icons/bs"
-import { useCookies } from "react-cookie";
-const Card = ({ ModalHandler, data, index }) => {
-    console.log(index)
-    const [cookies, setCookie] = useState(["fav_id"])
-    const favEvent = [];
-    const [fav, setFav] = useState(false);
-    const AddFav = (data) => {
-        favEvent.push(data.even_id);
-        console.log(favEvent)
-        setCookie("fav_id ", favEvent, { path: "/ " });
-        console.log(data.even_id)
+import { useEffect, useState } from "react"
+const Card = ({ Count, ModalHandler, data, index }) => {
+    const [favArr, setfavArr] = useState([])
+
+    useEffect(() => {
 
 
-        setFav(!fav);
-    }
-    const RemoveFav = (data) => {
 
-        setFav(!fav);
-    }
+    })
     return (
 
         <div class="card card-margin m-2">
 
-            {fav == false ?
+            <FavEvents data={index} />
 
-                <div className="favourite" onClick={() => { AddFav(data) }}><BsBookmark size={30} /></div>
-                : <div className="favourite" onClick={() => { RemoveFav(data) }}><BsBookmarkFill size={30} color="red" /></div>
-            }
             <div class="card-body ">
                 <div class="widget-49">
                     <div class="widget-49-title-wrapper">
