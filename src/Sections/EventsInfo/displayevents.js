@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Card from "../../Components/Cards/cards"
 import data from "../../Utils/EventsData"
 import { useCookies } from "react-cookie";
+import ArtistInfo from "../ArtistInfo/artistinfo"
 var postsPerPage = 5
 
 const DisplayEvents = () => {
@@ -57,7 +58,7 @@ const IncCount=()=>{
                             }
                         </>
                     )
-                })} 
+                })} {checkCook==true?<ArtistInfo  data={cookies.access_token}/>:<></>}
           
             {
                 postsToShow.length == postsPerPage ?
