@@ -29,9 +29,9 @@ const TotalEvents = () => {
         <>
             <h5>
                 {
-                    inpVal != "" ?
+                    inpVal != "" && cookies.access_token != undefined ?
                         <span className="even-info">{`${inpVal.name}`}  {`upcoming events : ${totalEv}`}</span>
-                        : <span className="even-info text-danger" >No Artist Search </span>
+                        : <span className="even-info text-success" >No Artist Search </span>
                 }
             </h5>
         </>

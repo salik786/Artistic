@@ -3,7 +3,7 @@ const SearchCard = ({ item, ClickHandler }) => {
     return (
         <div class="card p-0" onClick={() => ClickHandler(item)} >
             <div class="card-body d-flex flex-row">
-                <div className="w-25 p-0">
+                <div className=" p-0">
                     <img
                         className="rounded-circle"
                         src={item.img}

@@ -25,10 +25,6 @@ const Artist = () => {
     }
 
     return (<>
-
-
-
-
         <div className="container-fluid" >
             <ArtistSearch />
 

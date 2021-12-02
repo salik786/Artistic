@@ -33,9 +33,11 @@ const DisplayEvents = () => {
 
         if (cookVal != undefined) {
             setCook(true);
+            loopWithSlice(0, 100)
         }
-        loopWithSlice(0, 100)
-
+        else {
+            loopWithSlice(0, 10)
+        }
     }, [cookies])
 
 
@@ -46,21 +48,23 @@ const DisplayEvents = () => {
                     return (
                         <>
                             {cookies.access_token != undefined
-                                ? item.Art_id == cookies.access_token.id ?
+                                ? (item.Art_id == cookies.access_token.id) ?
 
                                     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                                         <Card key={index} data={item} index={index} Count={IncCount} />
                                     </div>
 
                                     : <></>
-                                : <></>
+                                : <> <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                    <Card key={index} data={item} index={index} Count={IncCount} />
+                                </div></>
                             }
                         </>
                     )
                 })}
 
                 {
-                    postsToShow.length == postsPerPage ?
+                    cookies.access_token == undefined ?
 
                         <div className="row p-4 text-center">
                             <Pagination MorePosts={handleShowMorePosts} />

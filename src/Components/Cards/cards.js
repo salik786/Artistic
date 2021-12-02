@@ -3,13 +3,7 @@ import FavEvents from "../FavEvents/favevents";
 import "./card.css"
 import { useEffect, useState } from "react"
 const Card = ({ Count, ModalHandler, data, index }) => {
-    const [favArr, setfavArr] = useState([])
-
-    useEffect(() => {
-
-
-
-    })
+   
     return (
 
         <div class="card card-margin m-2">
