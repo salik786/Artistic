@@ -5,6 +5,8 @@ import Events from "../../Utils/EventsData"
 
 function FavEvent() {
     const [favArr, setFavArr] = useState([])
+    //Method will get value and stores favorites items in array of objects
+
     function GetFav(arr) {
 
         const arr1 = JSON.parse(arr);//getting favorites array in local Storage
@@ -19,16 +21,12 @@ function FavEvent() {
 
             }
         }
-        // console.log(favArr)
-
-
-
-
     }
     useEffect(() => {
 
-
+        //getting data from local storages and checking for Error
         let arr = localStorage.getItem("fav");
+
         if (arr != undefined) {
             GetFav(arr);
         }
@@ -38,17 +36,16 @@ function FavEvent() {
     }, [])
     return (
         <div className="container-fluid">
-
-            <div className="row">
+            {/* <div className="row">
                 {favArr.map((item, index) => {
-                    return (<div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
 
                         <Card data={item} index={index} />
-                    </div>)
+                    </div>
                 })}
-            </div>
+            </div> */}
 
-
+            <h1>{favArr.length}</h1>
         </div>
     )
 }
