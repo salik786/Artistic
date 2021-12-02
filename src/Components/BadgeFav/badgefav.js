@@ -1,6 +1,6 @@
 
 import { BsBookmark, FcBookmark } from "react-icons/all"
-import "./favevents.css"
+import "./badgefav.css"
 import { useEffect, useState } from "react"
 import { useCookies } from "react-cookie";
 var arr = []
@@ -12,17 +12,20 @@ function FavEvents({ data }) {
 
 
     const AddFav = (e) => {
-        arr.push(data);
         var getLocal = localStorage.getItem("fav")
         if (getLocal == undefined) {
+            arr.push(data);
             localStorage.setItem("fav", JSON.stringify(arr))
-
         }
         else {
             var arr1 = JSON.parse(getLocal);
             if (!arr1.includes(data)) {
-                localStorage.setItem("fav", JSON.stringify(arr))
+
+                arr1.push(data);
+                localStorage.setItem("fav", JSON.stringify(arr1))
+                arr.push(arr1)
             }
+
         }
         setFav(!fav);
     }

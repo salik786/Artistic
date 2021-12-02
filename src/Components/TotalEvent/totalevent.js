@@ -15,16 +15,11 @@ const TotalEvents = () => {
                 console.log(cookVal.id)
                 if (Event[i].Art_id == cookVal.id) {
                     count++;
-
                 }
             }
             setTotalEv(count)
-
-
-
         }
     }, [cookies])
-
     return (
         <>
             <h5>

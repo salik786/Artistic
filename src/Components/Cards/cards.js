@@ -1,9 +1,9 @@
 
-import FavEvents from "../FavEvents/favevents";
+import FavEvents from "../BadgeFav/badgefav";
 import "./card.css"
 import { useEffect, useState } from "react"
-const Card = ({ Count, ModalHandler, data, index }) => {
-   
+const Card = ({ data, index }) => {
+
     return (
 
         <div class="card card-margin m-2">
@@ -27,7 +27,7 @@ const Card = ({ Count, ModalHandler, data, index }) => {
                         <li class="widget-49-meeting-item"><span>{data.venue}</span></li>
                     </ul>
                     <div class="widget-49-meeting-action">
-                        <a href="#" class="btn btn-sm btn-primary" onClick={ModalHandler}>Details</a>
+                        <a href="#" class="btn btn-sm btn-primary" >Details</a>
                     </div>
                 </div>
             </div>

@@ -6,13 +6,16 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { BrowserRouter } from 'react-router-dom';
 import 'react-bootstrap-country-select/dist/react-bootstrap-country-select.css';
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
