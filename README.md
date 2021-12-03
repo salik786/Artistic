@@ -3,16 +3,19 @@ On 29  Nov 2021 I was looking In my email and an interesting email pop up with t
 And things getting interesting for me ,I read  the task.The task is to search artist and display their name and Facebook and when user click on artists, their upcoming events show on the screen and write test cases and deploy strategy.Testing for react and deployment I heard about it but haven’t did before.So its quite interesting to always learn new things.
 
 
-
-
 Planning phase:
 
--Which stack I should opt for
--This phase include brain storming what type of architecture I should opt for
--What will be the best suitable architecture 
--What should be the name of project
--What type of use Cases I should implement 
--And designing of course it was open ended for me.
+-Which stack I should opt for?
+
+-This phase include brain storming what type of architecture I should opt for?
+
+-What will be the best suitable architecture ?
+
+-What should be the name of project?
+
+-What type of use Cases I should implement ?
+
+-And designing of course it was open ended for me.?
 
 So moving forward I write it down and set some standards for coding and project
 
