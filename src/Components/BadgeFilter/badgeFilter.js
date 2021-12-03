@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useCookies } from "react-cookie"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 function BadgeFilter({ FilterRemove }) {
+  // will show badge with country filter to display on screen taking argument 
+  // as function filter remove
   const [cookies, setCookie] = useCookies(["country"])
   const [country, setCountry] = useState(null)
   useEffect(() => {

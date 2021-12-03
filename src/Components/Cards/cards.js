@@ -3,7 +3,7 @@ import FavEvents from "../BadgeFav/badgefav";
 import "./card.css"
 import { useEffect, useState } from "react"
 const Card = ({ data, index }) => {
-
+// this compoennt will receive id and data to display and to favourites based on id
     return (
 
         <div class="card card-margin m-2">

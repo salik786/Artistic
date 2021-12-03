@@ -5,12 +5,12 @@ import { useEffect, useState } from "react"
 import { useCookies } from "react-cookie";
 var arr = []
 function FavEvents({ data }) {
+    // helps tp add favorite events so that user can view in future easily
     const [cookies, setCookie] = useCookies(["fav_id"])
 
     const [fav, setFav] = useState(false);
     const [count, setCount] = useState(0);
-
-
+    // adding favorites to localstorage to get persistant data along the tabs
     const AddFav = (e) => {
         var getLocal = localStorage.getItem("fav")
         if (getLocal == undefined) {
@@ -29,6 +29,7 @@ function FavEvents({ data }) {
         }
         setFav(!fav);
     }
+    //for removing fav events from localstorage
     const RemoveFav = (e) => {
         e.preventDefault();
         var a = localStorage.getItem("fav");

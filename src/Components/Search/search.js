@@ -34,7 +34,7 @@ const Search = () => {
 
 
     }
-
+//can be use for enter button in input
     // const EnterHandler = (event, item) => {
     //     // check for better user experience for search on Enter keyword
     //     if (event.key === 'Enter') {
