@@ -16,7 +16,7 @@ function App() {
           {/* <Artist /> */}
           {/* <FavEventsPage /> */}
           {/* <Route path="/" element={<Home />}> */}
-          <Route path="/search" element={<Artist /> }  key={document.location.href}/>
+          <Route path="/" element={<Artist /> }  key={document.location.href}/>
           <Route path="/favourite" element={<FavEventsPage /> }  key={document.location.href}></Route>
         </Routes >
         {/* <Footer /> */}

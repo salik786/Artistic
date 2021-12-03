@@ -19,17 +19,17 @@ const Navbar = () => {
 
                         <ul class="navbar-nav mb-2 ms-auto">
                             <li class="nav-item">
-                                <Link to="/" class="nav-link" aria-current="page" href="#">Home</Link>
+                                <Link to="/" class="nav-link" aria-current="page" href="#">Search Artists</Link>
                             </li>
-                            <li class="nav-item">
+                            {/* <li class="nav-item">
                                 <Link to="search" class="nav-link active" href="#">Search Artists</Link>
-                            </li>
+                            </li> */}
                             <li class="nav-item">
                                 <Link to="favourite" class="nav-link" href="#">Favourites</Link>
                             </li>
-                            <li class="nav-item">
+                            {/* <li class="nav-item">
                                 <a class="nav-link">Help</a>
-                            </li>
+                            </li> */}
                         </ul>
 
                     </div>
