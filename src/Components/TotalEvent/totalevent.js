@@ -12,7 +12,7 @@ const TotalEvents = () => {
             setInpVal(cookVal);
             let count = 0;
             for (var i = 0; i < Event.length; i++) {
-                console.log(cookVal.id)
+             
                 if (Event[i].Art_id == cookVal.id) {
                     count++;
                 }

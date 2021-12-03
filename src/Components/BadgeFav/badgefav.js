@@ -38,13 +38,12 @@ function FavEvents({ data }) {
             for (var i = 0; i < arr1.length; i++) {
 
                 if (arr1[i] === data) {
-                    console.log("Array :" + arr1[i]);
+                  
                     arr1.splice(i, 1);
                 }
 
             }
 
-            console.log(arr1);
         }
 
         setFav(!fav);

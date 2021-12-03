@@ -66,7 +66,7 @@ const Search = () => {
             <h5 className="">Search Your Favourite Artists</h5>
             <div class="input-group w-75">
 
-                <input id="search" autocomplete="off" type="search" id="form1" value={inpVal} class="form-control" onChange={HandleChange} placeholder="Enter Name of Artist" />
+                <input id="search" autoComplete="off" type="search" id="form1" value={inpVal} class="form-control" onChange={HandleChange} placeholder="Enter Name of Artist" />
                 <button type="button" class="btn btn-primary" onClick={ClickHandler} >
                     <BsSearch />
 

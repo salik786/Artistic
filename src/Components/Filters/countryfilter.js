@@ -8,7 +8,7 @@ const CountryFilter = () => {
 //add country into cookies  
     const AddCountry = (country) => {
         if (country != undefined) {
-            console.log(country)
+    
             setValue(country.name)
             setCookie("country", country.name, { path: '/' })
 
