@@ -3,12 +3,13 @@ import FavEvents from "../BadgeFav/badgefav";
 import "./card.css"
 import { useEffect, useState } from "react"
 const Card = ({ data, index }) => {
-// this compoennt will receive id and data to display and to favourites based on id
+    console.log(data)
+    // this compoennt will receive id and data to display and to favourites based on id
     return (
 
         <div class="card card-margin m-2">
 
-            <FavEvents data={index} />
+            {/* <FavEvents data={index} /> */}
 
             <div class="card-body ">
                 <div class="widget-49">
@@ -22,7 +23,7 @@ const Card = ({ data, index }) => {
                         </div>
                     </div>
                     <ul class="widget-49-meeting-points">
-                        <li class="widget-49-meeting-item"><span>{data.country}</span></li>
+                        <li class="widget-49-meeting-item"><span>{data}</span></li>
                         <li class="widget-49-meeting-item"><span>{data.city}</span></li>
                         <li class="widget-49-meeting-item"><span>{data.venue}</span></li>
                     </ul>

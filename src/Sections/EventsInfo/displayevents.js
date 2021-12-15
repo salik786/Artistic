@@ -3,10 +3,11 @@ import { useState, useEffect } from "react";
 import Card from "../../Components/Cards/cards"
 import data from "../../Utils/EventsData"
 import { useCookies } from "react-cookie";
+import axios from "axios"
 var postsPerPage = 5
 
 const DisplayEvents = () => {
-
+    const [myData, setMy] = useState([]);
     const [cookies, setCookie] = useCookies(['access_token'])
     const [checkCook, setCook] = useState(false)
     const [count, setCount] = useState(0)
@@ -33,7 +34,16 @@ const DisplayEvents = () => {
 
         if (cookVal != undefined) {
             setCook(true);
-            loopWithSlice(0, 100)
+            const dat = cookies.access_token.name;
+            axios.get(`https://rest.bandsintown.com/artists/${dat}/events?app_id=abc`).then(res => {
+                console.log(res.data)
+
+
+                setMy(res.data);
+            }).catch((err) => {
+                console.log(err)
+            })
+            // loopWithSlice(0, 100)
         }
         else {
             loopWithSlice(0, 10)
@@ -44,22 +54,14 @@ const DisplayEvents = () => {
     return (
         <>
             <div className="row">
-                {postsToShow.map((item, index) => {
+                {myData.map((item, index) => {
                     return (
-                        <>
-                            {cookies.access_token != undefined
-                                ? (item.Art_id == cookies.access_token.id) ?
 
-                                    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                        <Card key={index} data={item} index={index} />
-                                    </div>
+                        <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <Card key={index} data={item} index={index} />
+                        </div>
 
-                                    : <></>
-                                : <> <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                    <Card key={index} data={item} index={index} />
-                                </div></>
-                            }
-                        </>
+
                     )
                 })}
 

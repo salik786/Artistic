@@ -12,18 +12,14 @@ const Search = () => {
     const [cookies, setCookie, removeCookies] = useCookies(['access_token'])
     const [Dataset, setDataset] = useState([])
     const HandleChange = (e) => {
-
-        axios.get(`https://rest.bandsintown.com/artists/${e.target.value}/events?app_id=abc`).then(res => {
-
-
-            setDataset(res.data[0].artist)
-
-
+        axios.get(`https://rest.bandsintown.com/artists/${e.target.value}?app_id=abc`).then((res) => {
+            // setDataset(res.data);
+            console.log(res)
         }).catch(err => {
             console.log(err)
         })
-        setInpVal(e.target.value);
         setSelect(false)
+        setInpVal((e.target.value.toLowerCase()));
 
     }
 
@@ -92,14 +88,24 @@ const Search = () => {
 
                     inpVal != "" ? (
                         <div className="card-contain" >
+                            {Dataset.map((item, index) => {
+                                return (
+                                    cookies.country != undefined
+                                        ?
+                                        item.name.toLowerCase().includes(inpVal) && (cookies.country == item.country)
+                                            ?
 
-                            <SearchCard item={Dataset} ClickHandler={ClickHandler} />
+                                            <SearchCard item={item} ClickHandler={ClickHandler} />
+                                            :
+                                            <></>
+                                        : item.name.toLowerCase().includes(inpVal)
+                                            ?
 
-
-                            {/* // <SearchCard item={Dataset} ClickHandler={ClickHandler} /> */}
-
-
-
+                                            <SearchCard item={item} ClickHandler={ClickHandler} />
+                                            :
+                                            <></>
+                                )
+                            })}
                         </div>
                     ) : (
                         <></>

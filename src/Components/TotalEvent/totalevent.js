@@ -10,14 +10,8 @@ const TotalEvents = () => {
         const cookVal = cookies.access_token;
         if (cookVal != undefined) {
             setInpVal(cookVal);
-            let count = 0;
-            for (var i = 0; i < Event.length; i++) {
-             
-                if (Event[i].Art_id == cookVal.id) {
-                    count++;
-                }
-            }
-            setTotalEv(count)
+
+            setTotalEv(cookies.access_token.upcoming_event_count)
         }
     }, [cookies])
     return (

@@ -1,5 +1,5 @@
 const SearchCard = ({ item, ClickHandler }) => {
-
+    console.log(item.name)
     return (
         <div class="card p-0" onClick={() => ClickHandler(item)} >
             <div class="card-body d-flex flex-row">
