@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const ToggleArt = () => {
     const [cookies, setCookie] = useCookies(["access_token"])
     useEffect(() => {
-
+        console.log(cookies)
     }, [cookies.access_token])
     return (
         <>    {cookies.access_token != undefined ?
